@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1>Cadastro</h1>
+        <p>Preencha os dados abaixo para criar sua conta.</p>
+      </header>
+
+      <form id="cadastroForm" class="form" autocomplete="on">
+        <div class="grid">
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="ex: lucas.samel" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="ex: voce@dominio.com" required />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" minlength="6" required />
+          </div>
+
+          <div class="field">
+            <label for="cep">CEP</label>
+            <input
+              id="cep"
+              name="cep"
+              type="text"
+              inputmode="numeric"
+              maxlength="9"
+              placeholder="24230-062"
+              required
+            />
+            <small class="hint" id="cepHint">Formato: 00000-000</small>
+          </div>
+
+          <div class="field">
+            <label for="logradouro">Logradouro</label>
+            <input id="logradouro" name="logradouro" type="text" placeholder="Rua, Avenida..." required />
+          </div>
+
+          <div class="field">
+            <label for="complemento">Complemento</label>
+            <input id="complemento" name="complemento" type="text" placeholder="Apto, bloco, casa..." />
+          </div>
+
+          <div class="field">
+            <label for="bairro">Bairro</label>
+            <input id="bairro" name="bairro" type="text" placeholder="Seu bairro" required />
+          </div>
+
+          <div class="field">
+            <label for="localidade">Localidade</label>
+            <input id="localidade" name="localidade" type="text" placeholder="Cidade" required />
+          </div>
+
+          <div class="field">
+            <label for="uf">UF</label>
+            <select id="uf" name="uf" required>
+              <option value="" selected disabled>Selecione</option>
+              <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+              <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+              <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+              <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+              <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+              <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+              <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+              <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+              <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Cadastrar</button>
+          <button type="reset" class="btn btn--ghost">Limpar</button>
+        </div>
+      </form>
+
+      <footer class="card__footer">
+        <p class="muted">Ao cadastrar, você confirma que os dados estão corretos.</p>
+      </footer>
+    </section>
+  </main>
+
+</body>
+</html>

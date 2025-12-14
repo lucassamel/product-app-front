@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Link para o DataTables (CDN) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    
+</head>
+
+<body>
+    <main class="page">
+        <section class="card">
+            <header class="card__header">
+                <h1>Cadastro de Produto</h1>
+                <p>Preencha as informações do produto abaixo e envie.</p>
+            </header>
+
+            <form id="produtoForm" class="form">
+                <div class="grid">
+                    <!-- Campo nome -->
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" placeholder="Nome do Produto" required />
+                    </div>
+
+                    <!-- Campo preço -->
+                    <div class="field">
+                        <label for="preco">Preço</label>
+                        <input id="preco" name="preco" type="text" placeholder="R$20,00" required />
+                    </div>
+
+                    <!-- Campo descrição -->
+                    <div class="field">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" name="descricao" placeholder="Descrição do Produto"
+                            required></textarea>
+                    </div>
+
+                    <!-- Campo quantidade -->
+                    <div class="field">
+                        <label for="quantidade">Quantidade</label>
+                        <input id="quantidade" name="quantidade" type="number" min="1" placeholder="Quantidade"
+                            required />
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn">Cadastrar Produto</button>
+                </div>
+            </form>
+
+            <footer class="card__footer">
+                <p class="muted">Cadastre um novo produto na tabela abaixo.</p>
+            </footer>
+        </section>
+
+        <!-- Tabela de Produtos -->
+        <section class="card">
+            <header class="card__header">
+                <h1>Tabela de Produtos</h1>
+            </header>
+
+            <table id="produtosTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Produtos serão adicionados aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- jQuery (necessário para o DataTables e outras funcionalidades) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables (CDN) -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- Máscara para o preço -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" 
+    integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
