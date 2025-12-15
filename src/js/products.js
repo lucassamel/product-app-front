@@ -1,6 +1,6 @@
 $(function () {
 
-  const urlBase = "https://localhost:8081";
+  const urlBase = "https://localhost:7187";
 
   // Máscara para o preço
   $('#preco').mask('R$ 000.000.000,00', { reverse: true });
@@ -11,7 +11,7 @@ $(function () {
     getProductsList();
 
     // Envio do formulário
-    $('#produtoForm').on('submit', function (e) {
+    $('.cadastrarBtn').on('click', function (e) {
       e.preventDefault();
 
       newProduct();
@@ -204,8 +204,7 @@ $(function () {
       }),
       success: function (response) {
         $(".cadastrarBtn").removeClass("hidden");
-        $(".editarBtn").addClass("hidden");
-        getProductsList();
+        $(".editarBtn").addClass("hidden");       
 
       },
       error: function (xhr) {
