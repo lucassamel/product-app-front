@@ -1,6 +1,6 @@
 $(function () {
 
-  const urlBase = "https://localhost:7187";
+  const urlBase = "https://localhost:8081";
 
   // Máscara para o preço
   $('#preco').mask('R$ 000.000.000,00', { reverse: true });
@@ -19,6 +19,19 @@ $(function () {
 
 
   });
+
+  function brToDecimal(valor) {
+  if (valor === null || valor === undefined) return 0;
+
+  return Number(
+    valor
+      .toString()
+      .trim()
+      .replace(/\./g, "") // remove separador de milhar
+      .replace(",", ".")  // troca vírgula por ponto
+  );
+}
+
 
   function setUpTable(lista) {
     const table = document.getElementById("produtosTable");
@@ -104,7 +117,7 @@ $(function () {
       dataType: "json",
       data: JSON.stringify({
         name: name,
-        price: price,
+        price: brToDecimal(price),
         description: description,
         count: count
       }),
