@@ -23,7 +23,7 @@ $(function () {
         window.location.href = "/products.html";
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.responseText);
+        alert("Erro no login");
       }
     });
   });
@@ -67,7 +67,7 @@ $(function () {
         window.location.href = "/products.html";
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.responseText);
+        alert("Erro:", xhr.responseText);
       }
     });
   });
@@ -194,8 +194,7 @@ $(function () {
 
   // Exemplo de submit (não envia de verdade; só evita refresh)
   document.getElementById("cadastroForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    alert("Cadastro validado (exemplo).");
+    e.preventDefault();    
   });
 
   // Reset: limpa status do CEP

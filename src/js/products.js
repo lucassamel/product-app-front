@@ -94,7 +94,7 @@ $(function () {
         setUpTable(response.data, "produtosTable", false);
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.status);
+        alert("Erro:", xhr.status);
       }
     });
   };
@@ -119,7 +119,7 @@ $(function () {
         name: name,
         price: brToDecimal(price),
         description: description,
-        count: count
+        count: parseInt(count)
       }),
       success: function (response) {
 
@@ -127,7 +127,7 @@ $(function () {
 
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.responseText);
+        alert("Erro:", xhr.responseText);
       }
     });
   };
@@ -187,7 +187,7 @@ $(function () {
         $(".editarBtn").data("id", guid);
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.responseText);
+        alert("Erro:", xhr.responseText);
       }
     });
   };
@@ -211,9 +211,9 @@ $(function () {
       dataType: "json",
       data: JSON.stringify({
         name: name,
-        price: price,
+        price: brToDecimal(price),
         description: description,
-        count: count
+        count: parseInt(count)
       }),
       success: function (response) {
         $(".cadastrarBtn").removeClass("hidden");
@@ -221,7 +221,7 @@ $(function () {
 
       },
       error: function (xhr) {
-        console.log("Erro:", xhr.responseText);
+        alert("Erro:", xhr.responseText);
       }
     });
 
