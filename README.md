@@ -20,7 +20,7 @@ O projeto tem como objetivo demonstrar:
 - localStorage
 
 ---
-## Diagrama 
+## Fluxograma 
 <img width="551" height="341" alt="image" src="https://github.com/user-attachments/assets/063fe143-8ac7-4b1c-9977-0adacd19a780" />
 
 ---
