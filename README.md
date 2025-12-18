@@ -1,6 +1,6 @@
 # product-app-front
 
-
+<img width="551" height="341" alt="image" src="https://github.com/user-attachments/assets/063fe143-8ac7-4b1c-9977-0adacd19a780" />
 
 ---
 ## Como executar em modo de desenvolvimento
@@ -21,7 +21,7 @@ $ docker build -t nome_da_sua_imagem .
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
 
 ```
-$ docker run -d -p 8080:80 nome_da_sua_imagem
+$ docker run -d -p 8082:80 product_app_front
 ```
 
-Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:8080/#/](http://localhost:8080/#/) no navegador.
+Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:8080/](http://localhost:8082/) no navegador.
