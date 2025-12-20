@@ -42,7 +42,7 @@ $ docker build --no-cache -t product_app_front .
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
 
 ```
-$ docker run -d -p 8080:80 product_app_front
+$ docker run -d -p 8082:80 product_app_front
 ```
 
 Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:8080/](http://localhost:8082/) no navegador.
