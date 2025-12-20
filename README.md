@@ -46,3 +46,5 @@ $ docker run -d -p 8082:80 product_app_front
 ```
 
 Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:8080/](http://localhost:8082/) no navegador.
+
+> APi Externa [Via Cep](https://viacep.com.br/)
